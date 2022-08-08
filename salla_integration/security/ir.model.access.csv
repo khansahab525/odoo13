@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_salla_integration,salla.integration,model_salla_integration,base.group_user,1,1,1,1
+access_salla_settings,salla.settings,model_salla_settings,base.group_user,1,1,1,1
+access_wk_wizard_message,wk.wizard.message,model_wk_wizard_message,base.group_user,1,1,1,1
+access_salla_stores,salla.stores,model_salla_stores,base.group_user,1,1,1,1

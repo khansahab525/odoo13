@@ -1,0 +1,48 @@
+<odoo>
+    <record id="salla_config_form" model="ir.ui.view">
+        <field name="name">Configuration</field>
+        <field name="model">salla.integration</field>
+        <field name="arch" type="xml">
+            <form string="Create Odoo Records">
+                <header>
+                    <button name="salla_integration_orders" type="object" string="Sale Orders"
+                            attrs="{'invisible': [('endponts', '!=', 'orders')]}"/>
+                    <button name="salla_integration_products" type="object" string="Products"
+                            attrs="{'invisible': [('endponts', '!=', 'products')]}"/>
+                    <button name="salla_integration_customers" type="object" string="Customers"
+                            attrs="{'invisible': [('endponts', '!=', 'customers')]}"/>
+
+                </header>
+                <sheet>
+                    <group string="Create Odoo Records">
+
+                        <group string="Credentials" >
+                            <field name="token_key"/>
+                            <field name="endponts" widget="selection"/>
+                        </group>
+
+                        <group string="Filter Record">
+                            <field name="page_from"/>
+                            <field name="page_to"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="con_url"/>
+
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="salla_config_action_view" model="ir.actions.act_window">
+        <field name="name">Create Odoo Records</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">salla.integration</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="salla_config_root_menu" name="Salla" sequence="13"/>
+    <menuitem id="salla_config_action_menu" name="Create Odoo Records" parent="salla_config_root_menu"
+              action="salla_config_action_view" sequence="9"/>
+</odoo>

@@ -1,0 +1,21 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+<!--    <record id="salla_integration" model="ir.ui.view">-->
+<!--        <field name="name">salla_integration</field>-->
+<!--        <field name="model">sale.order</field>-->
+<!--        <field name="inherit_id" ref="sale.view_order_form"/>-->
+<!--        <field name="arch" type="xml">-->
+
+<!--            <xpath expr="//header/button[@name='action_cancel']" position="after">-->
+<!--                <button name="salla_connection" type="object" string="Salla Connection"/>-->
+<!--            </xpath>-->
+
+<!--            &lt;!&ndash;            <xpath expr="//group[@name='order_details']" position="inside">&ndash;&gt;-->
+<!--            &lt;!&ndash;                <field name="create_date"/>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </xpath>&ndash;&gt;-->
+
+
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

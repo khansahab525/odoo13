@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record id="salla_stores_tree_id" model="ir.ui.view">
+            <field name="name">salla store</field>
+            <field name="model">salla.stores</field>
+            <field name="arch" type="xml">
+                <tree string="Salla Stores">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="salla_stores_form_id" model="ir.ui.view">
+            <field name="name">salla stores</field>
+            <field name="model">salla.stores</field>
+            <field name="arch" type="xml">
+                <form string="Salla Stores">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="salla_stores_view_action_id" model="ir.actions.act_window">
+            <field name="name">Salla Stores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">salla.stores</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+        <menuitem id="salla_store_menu_id" name="Salla Stores" parent="salla_integration.salla_config_root_menu"
+                  action="salla_stores_view_action_id" sequence="12"/>
+    </data>
+</odoo>
