@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <template id="sale_manual_discount_inherit_homepage" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center" style="margin-top: 25px;">
+                        <h2>Create Product</h2>
+                    </div>
+                </div>
+                <form t-attf-action="/test/product" method="POST">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="pr_name">Name</label>
+                            <input type="text" class="form-control" id="pr_name" placeholder="Enter Product Name"/>
+                        </div>
+                        <div class="col-6">
+                            <label for="pr_cost">Cost Price</label>
+                            <input type="text" class="form-control" id="pr_cost" placeholder="Enter Product Cost"/>
+                        </div>
+                    </div>
+<!--                    <input type="hidden" name="redirect" t-att-value="redirect"/>-->
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4 d-flex justify-content-center" style="margin-top: 25px;">
+                            <button type="submit" class="btn btn-primary">Create Product</button>
+                        </div>
+                        <div class="col-4">
+                        </div>
+                    </div>
+                </form>
+            </xpath>
+        </template>
+    </data>
+</odoo>
